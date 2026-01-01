@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Initialization.md",
+                "file": "App prompt.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Initialization"
+              "title": "App prompt"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Initialization.md",
+                "file": "App prompt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Initialization"
+              "title": "Backlinks for App prompt"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Initialization.md",
+                "file": "App prompt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Initialization"
+              "title": "Outgoing links from App prompt"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Initialization.md",
+                "file": "App prompt.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Initialization"
+              "title": "Outline of App prompt"
             }
           }
         ]
@@ -185,8 +185,8 @@
   },
   "active": "caf6694cbcdd44cb",
   "lastOpenFiles": [
-    "App prompt.md",
     "Initialization.md",
+    "App prompt.md",
     "How to install tools.md"
   ]
 }
