@@ -1,0 +1,1 @@
+Please make a new github repo for the project using `gh` tool. I should be already authenticated.
