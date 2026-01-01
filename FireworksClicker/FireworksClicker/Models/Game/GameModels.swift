@@ -35,13 +35,20 @@ struct Building: Identifiable, Codable {
   }
 }
 
+enum UpgradeEffectType: String, Codable {
+  case costReduction        // Reduces building costs
+  case productionMultiplier // Increases production
+  case clickMultiplier      // Increases click value
+}
+
 struct Upgrade: Identifiable, Codable {
   let id: UUID
   let name: String
   let description: String
-  let cost: Double
+  let cost: Double  // Cost in Innovation Points
   let unlockLevel: Int
   var isPurchased: Bool
-  // In a real implementation, we'd use an enum or closure for effect,
-  // but for data structure start we can use flags or effectTypes
+  let effectType: UpgradeEffectType
+  let effectValue: Double  // e.g., 0.9 for 10% cost reduction, 1.5 for 50% production boost
+  let targetBuildingName: String?  // nil = global, otherwise targets specific building
 }

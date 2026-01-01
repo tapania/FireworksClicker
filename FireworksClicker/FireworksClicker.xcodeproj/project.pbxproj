@@ -16,7 +16,14 @@
 		A100000D238F8A8F00000007 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100000E238F8A8F00000007 /* Theme.swift */; };
 		A100000F238F8A8F00000008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000010238F8A8F00000008 /* Assets.xcassets */; };
 		A1000020238F8A8F00000020 /* FireworksClickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000021238F8A8F00000020 /* FireworksClickerTests.swift */; };
-/* End PBXBuildFile section */
+		A1000030238F8A8F00000030 /* GameModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000031238F8A8F00000031 /* GameModelTests.swift */; };
+		A1000032238F8A8F00000032 /* LevelDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000033238F8A8F00000033 /* LevelDefinition.swift */; };
+		A1000034238F8A8F00000034 /* LevelProgressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000035238F8A8F00000035 /* LevelProgressionTests.swift */; };
+		2C70720DFA894A8AA97591B0 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1FFA43E63047DDABA3D8F3 /* GameState.swift */; };
+		09404DB86E4E4660A8E9DA00 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70851037BC4016B1A1AC12 /* PersistenceService.swift */; };
+		75169B58ABEC443A90953492 /* PersistenceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D553DC5F56204213AC9A3A2F /* PersistenceServiceTests.swift */; };
+		A1000036238F8A8F00000036 /* UpgradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000037238F8A8F00000037 /* UpgradeTests.swift */; };
+		/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A1000022238F8A8F00000022 /* PBXContainerItemProxy */ = {
@@ -40,7 +47,14 @@
 		A1000010238F8A8F00000008 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1000023238F8A8F00000023 /* FireworksClickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireworksClickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1000021238F8A8F00000020 /* FireworksClickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksClickerTests.swift; sourceTree = "<group>"; };
-/* End PBXFileReference section */
+		A1000031238F8A8F00000031 /* GameModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModelTests.swift; sourceTree = "<group>"; };
+		A1000033238F8A8F00000033 /* LevelDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDefinition.swift; sourceTree = "<group>"; };
+		A1000035238F8A8F00000035 /* LevelProgressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelProgressionTests.swift; sourceTree = "<group>"; };
+		A1000037238F8A8F00000037 /* UpgradeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeTests.swift; sourceTree = "<group>"; };
+		8D1FFA43E63047DDABA3D8F3 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		AF70851037BC4016B1A1AC12 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		D553DC5F56204213AC9A3A2F /* PersistenceServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceServiceTests.swift; sourceTree = "<group>"; };
+		/* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A1000006238F8A8F00000001 /* Frameworks */ = {
@@ -76,6 +90,7 @@
 				A1000012238F8A8F00000012 /* Models */,
 				A1000013238F8A8F00000013 /* ViewModels */,
 				A1000014238F8A8F00000014 /* Views */,
+				195B205AB1244DD4BC861179 /* Services */,
 				A1000010238F8A8F00000008 /* Assets.xcassets */,
 			);
 			path = FireworksClicker;
@@ -110,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				A1000004238F8A8F00000002 /* GameModels.swift */,
+				A1000033238F8A8F00000033 /* LevelDefinition.swift */,
+				8D1FFA43E63047DDABA3D8F3 /* GameState.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -161,8 +178,21 @@
 			isa = PBXGroup;
 			children = (
 				A1000021238F8A8F00000020 /* FireworksClickerTests.swift */,
+				A1000031238F8A8F00000031 /* GameModelTests.swift */,
+				A1000035238F8A8F00000035 /* LevelProgressionTests.swift */,
+				D553DC5F56204213AC9A3A2F /* PersistenceServiceTests.swift */,
+				A1000037238F8A8F00000037 /* UpgradeTests.swift */,
 			);
 			path = FireworksClickerTests;
+			sourceTree = "<group>";
+		};
+
+		195B205AB1244DD4BC861179 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AF70851037BC4016B1A1AC12 /* PersistenceService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +293,9 @@
 				A1000009238F8A8F00000005 /* FireworksEffectView.swift in Sources */,
 				A100000B238F8A8F00000006 /* AssetProvider.swift in Sources */,
 				A100000D238F8A8F00000007 /* Theme.swift in Sources */,
+				A1000032238F8A8F00000032 /* LevelDefinition.swift in Sources */,
+				2C70720DFA894A8AA97591B0 /* GameState.swift in Sources */,
+				09404DB86E4E4660A8E9DA00 /* PersistenceService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +304,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1000020238F8A8F00000020 /* FireworksClickerTests.swift in Sources */,
-			);
+				A1000030238F8A8F00000030 /* GameModelTests.swift in Sources */,
+				A1000034238F8A8F00000034 /* LevelProgressionTests.swift in Sources */,
+				A1000036238F8A8F00000036 /* UpgradeTests.swift in Sources */,
+				75169B58ABEC443A90953492 /* PersistenceServiceTests.swift in Sources */,);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
