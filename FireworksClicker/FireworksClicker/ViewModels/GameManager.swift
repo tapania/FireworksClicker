@@ -9,11 +9,19 @@ class GameManager: ObservableObject {
   @Published var buildings: [Building] = []
   @Published var upgrades: [Upgrade] = []
 
+  // Level unlock feedback
+  @Published var showLevelUpModal: Bool = false
+  @Published var lastUnlockedLevel: LevelDefinition?
+
   let levels: [LevelDefinition] = LevelDefinition.allLevels
 
   private var timer: AnyCancellable?
+  private let audioService: AudioService
+  private let hapticService: HapticService
 
-  init() {
+  init(audioService: AudioService = .shared, hapticService: HapticService = .shared) {
+    self.audioService = audioService
+    self.hapticService = hapticService
     setupBuildings()
     setupUpgrades()
     startTimer()
@@ -83,6 +91,15 @@ class GameManager: ObservableObject {
 
     innovationPoints -= nextLevel.unlockCost
     currentLevel += 1
+
+    // Set level unlock feedback state
+    lastUnlockedLevel = nextLevel
+    showLevelUpModal = true
+
+    // Play audio and haptic feedback for level up
+    audioService.playLevelUp()
+    hapticService.heavyImpact()
+
     return true
   }
 
@@ -102,6 +119,10 @@ class GameManager: ObservableObject {
     // Deduct cost and mark as purchased
     innovationPoints -= upgrade.cost
     upgrades[index].isPurchased = true
+
+    // Play audio and haptic feedback for successful purchase
+    audioService.playPurchase()
+    hapticService.mediumImpact()
   }
 
   private func startTimer() {
@@ -127,6 +148,10 @@ class GameManager: ObservableObject {
     // Base click value with multipliers
     let baseClickValue = 1.0
     sparks += baseClickValue * clickMultiplier
+
+    // Play audio and haptic feedback
+    audioService.playClick()
+    hapticService.lightImpact()
   }
 
   func buyBuilding(buildingId: UUID) {
@@ -139,6 +164,10 @@ class GameManager: ObservableObject {
     if sparks >= finalCost {
       sparks -= finalCost
       buildings[index].count += 1
+
+      // Play audio and haptic feedback for successful purchase
+      audioService.playPurchase()
+      hapticService.mediumImpact()
     }
   }
 

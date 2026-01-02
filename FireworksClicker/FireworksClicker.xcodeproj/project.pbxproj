@@ -23,6 +23,13 @@
 		09404DB86E4E4660A8E9DA00 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70851037BC4016B1A1AC12 /* PersistenceService.swift */; };
 		75169B58ABEC443A90953492 /* PersistenceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D553DC5F56204213AC9A3A2F /* PersistenceServiceTests.swift */; };
 		A1000036238F8A8F00000036 /* UpgradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000037238F8A8F00000037 /* UpgradeTests.swift */; };
+		B1A0D1E238F8A8F00000038 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0D1E338F8A8F00000039 /* AudioService.swift */; };
+		B1A0D1E438F8A8F00000040 /* HapticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0D1E538F8A8F00000041 /* HapticService.swift */; };
+		C1000042238F8A8F00000042 /* LevelUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1000043238F8A8F00000043 /* LevelUpView.swift */; };
+		C1000044238F8A8F00000044 /* LevelProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1000045238F8A8F00000045 /* LevelProgressBar.swift */; };
+		277935C0C19D43749BEFB0FB /* BuildingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8EE824BBD840B7AFD00FC1 /* BuildingRowView.swift */; };
+		13778BC17DE04FA5833FC2F8 /* UpgradeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2FB8DFE9041129DD0A8EC /* UpgradeRowView.swift */; };
+		0EED90554189420FA144D7CB /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0530C8C41F75462F8645F154 /* ShopView.swift */; };
 		/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +61,13 @@
 		8D1FFA43E63047DDABA3D8F3 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		AF70851037BC4016B1A1AC12 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		D553DC5F56204213AC9A3A2F /* PersistenceServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceServiceTests.swift; sourceTree = "<group>"; };
+		B1A0D1E338F8A8F00000039 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
+		B1A0D1E538F8A8F00000041 /* HapticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticService.swift; sourceTree = "<group>"; };
+		C1000043238F8A8F00000043 /* LevelUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpView.swift; sourceTree = "<group>"; };
+		C1000045238F8A8F00000045 /* LevelProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelProgressBar.swift; sourceTree = "<group>"; };
+		0A8EE824BBD840B7AFD00FC1 /* BuildingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingRowView.swift; sourceTree = "<group>"; };
+		0DE2FB8DFE9041129DD0A8EC /* UpgradeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeRowView.swift; sourceTree = "<group>"; };
+		0530C8C41F75462F8645F154 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		/* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				A1000016238F8A8F00000016 /* Screens */,
+				C1000046238F8A8F00000046 /* Components */,
 				A1000017238F8A8F00000017 /* Effects */,
+								6050919C125F463882F79A38 /* Components */,
 				A1000018238F8A8F00000018 /* DesignSystem */,
 			);
 			path = Views;
@@ -153,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				A1000008238F8A8F00000004 /* MainGameView.swift */,
+				0530C8C41F75462F8645F154 /* ShopView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -174,6 +191,24 @@
 			path = DesignSystem;
 			sourceTree = "<group>";
 		};
+		6050919C125F463882F79A38 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0A8EE824BBD840B7AFD00FC1 /* BuildingRowView.swift */,
+				0DE2FB8DFE9041129DD0A8EC /* UpgradeRowView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C1000046238F8A8F00000046 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C1000043238F8A8F00000043 /* LevelUpView.swift */,
+				C1000045238F8A8F00000045 /* LevelProgressBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		A1000025238F8A8F00000025 /* FireworksClickerTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				AF70851037BC4016B1A1AC12 /* PersistenceService.swift */,
+				B1A0D1E338F8A8F00000039 /* AudioService.swift */,
+				B1A0D1E538F8A8F00000041 /* HapticService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -291,11 +328,18 @@
 				A1000005238F8A8F00000003 /* GameManager.swift in Sources */,
 				A1000007238F8A8F00000004 /* MainGameView.swift in Sources */,
 				A1000009238F8A8F00000005 /* FireworksEffectView.swift in Sources */,
+				277935C0C19D43749BEFB0FB /* BuildingRowView.swift in Sources */,
+				13778BC17DE04FA5833FC2F8 /* UpgradeRowView.swift in Sources */,
+				0EED90554189420FA144D7CB /* ShopView.swift in Sources */,
 				A100000B238F8A8F00000006 /* AssetProvider.swift in Sources */,
 				A100000D238F8A8F00000007 /* Theme.swift in Sources */,
 				A1000032238F8A8F00000032 /* LevelDefinition.swift in Sources */,
 				2C70720DFA894A8AA97591B0 /* GameState.swift in Sources */,
 				09404DB86E4E4660A8E9DA00 /* PersistenceService.swift in Sources */,
+				B1A0D1E238F8A8F00000038 /* AudioService.swift in Sources */,
+				B1A0D1E438F8A8F00000040 /* HapticService.swift in Sources */,
+				C1000042238F8A8F00000042 /* LevelUpView.swift in Sources */,
+				C1000044238F8A8F00000044 /* LevelProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

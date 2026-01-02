@@ -43,6 +43,10 @@ struct MainGameView: View {
         .cornerRadius(12)
         .padding(.horizontal)
 
+        // Level Progress Bar
+        LevelProgressBar(gameManager: gameManager)
+          .padding(.horizontal)
+
         // Big Click Button
         GeometryReader { geo in
           VStack {
@@ -88,18 +92,22 @@ struct MainGameView: View {
         }
         .frame(height: 200)
 
-        // Buildings List
-        List {
-          Section(header: Text("Buildings").foregroundColor(Color.Theme.secondaryText)) {
-            ForEach(gameManager.buildings) { building in
-              BuildingRow(building: building, gameManager: gameManager)
-            }
-          }
-        }
-        .listStyle(.plain)
-        .background(Color.clear)
+        // Shop & Research View
+        ShopView()
+          .environmentObject(gameManager)
       }
       .zIndex(2)
+
+      // Level Up Modal
+      if gameManager.showLevelUpModal, let level = gameManager.lastUnlockedLevel {
+        LevelUpView(
+          level: level,
+          buildings: gameManager.buildings,
+          upgrades: gameManager.upgrades,
+          isPresented: $gameManager.showLevelUpModal
+        )
+        .zIndex(3)
+      }
     }
   }
 }
