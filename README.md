@@ -126,4 +126,4 @@ See `CLAUDE.md` for Claude Code-specific guidance and `plans/` for detailed desi
 
 ## License
 
-Private project.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
